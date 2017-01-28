@@ -22,6 +22,10 @@ new Vue({
 
   },
 
+  editItem: function(i){
+    console.log("hello");
+  },
+
   //  printItem: function (p) {
   //    return `${p.title}`;
   //    return `${p.content}`;

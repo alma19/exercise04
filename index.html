@@ -22,7 +22,7 @@
               <p> {{ item.content}}</p>
             </div>
             <footer class="card-footer">
-              <a class="card-footer-item">Edit</a>
+              <a class="card-footer-item" @click="editItem(index)">Edit</a>
               <a class="card-footer-item" @click="removeItem(index)">Done</a> <!--@click="removeItem(item)"-->
             </footer>
             <br />
