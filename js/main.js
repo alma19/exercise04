@@ -12,20 +12,31 @@ new Vue({
       content: this.toDoItemContentInputValue,
     })
 
-    //idk if i need this come back 2 it
+
     this.toDoItemTitleInputValue = '';
     this.toDoItemContentInputValue = '';
 
   }, //end addItem
 
-  removeItem (i){
+   printItem: function (p) {
+     return `${p.title}`;
+     return `${p.content}`;
+   },
+
+   removeItem (i){
     console.log(i);
-  } // end removeItem()
+   } // end removeItem()
 }, // end methods
   data: {
     toDoItemTitleInputValue: '',
     toDoItemContentInputValue: '',
-    items: []
+    //setting example to-do card text
+    items: [
+      {
+        title: 'To Do Item Title',
+        content: 'My First To Do Item'
+      }
+    ]
 
   }
 

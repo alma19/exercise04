@@ -14,17 +14,18 @@
       <div class="column is-half is-offset-one-quarter content">
 
         <section>
-          <div class="card" v-form="item in items"> <!--// v- for -->
+          <div class="card" v-for="item in items"> <!--// v- for -->
             <div class="card-header">
-              <p class="card-header-title">Todo Item Title</p>
+              <p class="card-header-title">{{ item.title}} </p>
             </div>
             <div class="card-content">
-              <p>My First Todo Item</p>
+              <p> {{ item.content}}</p>
             </div>
             <footer class="card-footer">
               <a class="card-footer-item">Edit</a>
-              <a class="card-footer-item">Done</a> <!--@click="removeItem(item)"-->
+              <a class="card-footer-item" @click="removeItem">Done</a> <!--@click="removeItem(item)"-->
             </footer>
+            <br />
           </div>
         </section>
 
