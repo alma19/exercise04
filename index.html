@@ -14,7 +14,7 @@
       <div class="column is-half is-offset-one-quarter content">
 
         <section>
-          <div class="card" v-for="item in items"> <!--// v- for -->
+          <div class="card" v-for="(item, index) in items"> <!--// v- for -->
             <div class="card-header">
               <p class="card-header-title">{{ item.title}} </p>
             </div>
@@ -23,7 +23,7 @@
             </div>
             <footer class="card-footer">
               <a class="card-footer-item">Edit</a>
-              <a class="card-footer-item" @click="removeItem">Done</a> <!--@click="removeItem(item)"-->
+              <a class="card-footer-item" @click="removeItem(index)">Done</a> <!--@click="removeItem(item)"-->
             </footer>
             <br />
           </div>
@@ -44,7 +44,7 @@
           </div>
           <div class="control">
             <!-- this should only be visible if we are editing -->
-            <a class="button">Cancel</a>
+            <a class="button" @click="cancelItem">Cancel</a>
           </div>
         </section>
 

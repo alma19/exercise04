@@ -11,20 +11,24 @@ new Vue({
       title: this.toDoItemTitleInputValue,
       content: this.toDoItemContentInputValue,
     })
-
-
     this.toDoItemTitleInputValue = '';
     this.toDoItemContentInputValue = '';
 
   }, //end addItem
 
-   printItem: function (p) {
-     return `${p.title}`;
-     return `${p.content}`;
-   },
+  cancelItem: function(){
+    this.toDoItemTitleInputValue = '',
+    this.toDoItemContentInputValue = ''
 
-   removeItem (i){
-    console.log(i);
+  },
+
+  //  printItem: function (p) {
+  //    return `${p.title}`;
+  //    return `${p.content}`;
+  //  },
+
+   removeItem: function (i){
+    this.items.splice(i, 1);
    } // end removeItem()
 }, // end methods
   data: {
