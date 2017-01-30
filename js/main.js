@@ -16,20 +16,12 @@ new Vue({
 
   }, //end addItem
 
+  // add funcionality to Cancel button
   cancelItem: function(){
     this.toDoItemTitleInputValue = '',
     this.toDoItemContentInputValue = ''
 
   },
-
-  editItem: function(i){
-    console.log("hello");
-  },
-
-  //  printItem: function (p) {
-  //    return `${p.title}`;
-  //    return `${p.content}`;
-  //  },
 
    removeItem: function (i){
     this.items.splice(i, 1);
